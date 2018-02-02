@@ -20,7 +20,9 @@ const App = createReactClass({
   },
 
   componentDidMount() {
-    this.setState({loading: false})
+    setTimeout(() => {
+      this.setState({loading: false})
+    }, 2000)
   },
 
   render() {
