@@ -1,0 +1,11 @@
+.t__home-page {
+  section {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0 0;
+  
+    @include breakpoint($mobile) {
+      margin: 40px 0 0;
+    }
+  }
+}

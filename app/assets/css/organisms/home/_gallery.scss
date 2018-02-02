@@ -1,0 +1,17 @@
+.o__home-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+
+  @include breakpoint($mobile) {
+    // margin: 0 0 0 -10px;
+    // max-width: calc(100% - 20px);
+    
+    margin: 0 0 0 -40px;
+    max-width: calc(100% - 40px);
+  }
+
+  @include breakpoint($desktop) {
+    max-width: 1440px;
+  }
+}

@@ -1,0 +1,11 @@
+.t__contact-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 600px;
+  }
+}

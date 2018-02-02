@@ -1,0 +1,68 @@
+.m__main-item {
+  display: block;
+  flex-wrap: wrap;
+  flex-basis: calc((100%) - 20px);
+  width: calc((100%) - 20px);
+  margin: 0 10px;  
+  
+  border-bottom: 1px solid rgba(238, 238, 238, 1);
+
+  img {
+    width: 100%;
+    transform: scale(1);
+    transition: transform 0.3s;
+  }
+
+  aside {
+    padding: 20px 0;
+
+    h5 {
+      font-size: 10px;
+      font-family: ACaslonPro-Regular;
+      text-transform: uppercase;
+      color: rgba(140, 140, 140, 1);
+    }
+
+    h4 {
+      margin: 10px 0 0;
+      font-size: 24px;
+      font-family: Springville-Regular3;
+      transition: color 0.3s;
+    }
+
+    p {
+      margin: 10px 0 0;
+      font-size: 10px;
+      font-family: ACaslonPro-Regular;
+      color: rgba(130, 130, 130, 1)
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    img {
+      transform: scale(0.9);
+      transition: transform 0.3s;
+    }
+    
+    aside {
+      h4 {
+        color: rgba(160, 160, 160, 1);
+        transition: color 0.3s;
+      }
+    }
+  }
+
+  @include breakpoint($mobile) {
+    flex-basis: calc((100% / 2) - 40px);
+    width: calc((100% / 2) - 40px);
+    margin: 0 0 30px 40px;
+  }
+
+  @include breakpoint($tablet) {
+    flex-basis: calc(100% / 3);
+    width: calc((100% / 3) - 40px);
+    margin: 0 0 30px 40px;
+  }
+}

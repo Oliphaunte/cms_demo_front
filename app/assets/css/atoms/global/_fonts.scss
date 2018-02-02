@@ -1,0 +1,29 @@
+html {
+  // Higher quality rendering -- impacts performance
+  text-rendering: optimizeLegibility !important;
+
+  // Chrome & Opera
+  -webkit-font-smoothing: antialiased !important;
+
+  // Firefox on OSX
+  -moz-osx-font-smoothing: grayscale !important;
+
+  // IE -- Causes problems on safari
+  // -webkit-text-shadow: rgba(255,255,255,0.01) 0 0 1px !important;
+  // -webkit-text-stroke: rgba(255,255,255,0.01) 0.1px !important;
+  // -webkit-text-stroke-width: 0.1px !important;
+}
+
+@font-face {
+  font-family: 'Springville-Regular3';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Springville-Regular3.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'ACaslonPro-Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/ACaslonPro-Regular.otf') format('opentype');
+}

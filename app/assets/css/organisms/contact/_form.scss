@@ -1,0 +1,92 @@
+.o__contact-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+
+  position: relative;
+  padding: 20px 10px;
+
+  box-sizing: border-box;
+
+  article {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    justify-content: space-between;
+
+    padding: 20px 0;
+
+    h2 {
+      flex-basis: 100%;
+      padding: 0 0 10px;
+      margin: 0 0 10px;
+
+      font-family: Springville-Regular3, sans-serif;
+    }
+  }
+
+
+  button {
+    padding: 5px 5px;
+
+    font-size: 16px;
+    font-family: Springville-Regular3, sans-serif;
+    letter-spacing: 1px;
+    border: 1px solid  rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+
+    &:hover {
+      background-color: rgba(0, 99, 44, 0.6);
+      color: rgba(255, 255, 255, 1);
+      cursor: pointer;
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+
+    label {
+      flex-basis: 100%;
+
+      margin: 5px 0;
+      font-size: 24px;
+      font-family: Springville-Regular3;
+    }
+
+    input, select {
+      flex-basis: 100%;
+
+      padding: 0 5px;
+      height: 40px;
+      border: 1px solid rgba(0, 0, 0, 0.6);
+    }
+  }
+
+  .has-error {
+    font-family: Springville-Regular3;
+
+    input, select {
+      border: 2px solid rgba(231, 44, 44, 0.6);
+    }
+  }
+  
+
+  @include breakpoint($mobile) {
+  }
+
+  @include breakpoint($tablet) {
+    article {
+      padding: 20px 10px;
+
+      h2 {
+        border-bottom: 1px dotted rgba(0, 0, 0, 0.7)
+      }
+    }
+    
+    .container {
+      flex-basis: 45%;
+    }
+  }
+}
