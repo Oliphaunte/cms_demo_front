@@ -1,0 +1,12 @@
+.t__error-page {
+  justify-content: center;
+
+  section.error-page {
+    justify-content: center;
+    align-items: center;
+
+    &__container {
+      max-width: 540px;
+    }
+  }
+}

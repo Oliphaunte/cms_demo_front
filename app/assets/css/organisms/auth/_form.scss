@@ -1,0 +1,20 @@
+.o__auth-form {
+  max-width: 540px;
+
+  article.auth-form {
+    &__form-header {
+      flex-basis: 100%;
+      margin: 0 0 20px;
+    }
+
+    &__input-container {
+      flex-basis: 100%;
+      margin: 0 0 20px;
+    }
+
+    &__form-submit {
+      flex-basis: 100%;
+      justify-content: flex-end;
+    }
+  }
+}

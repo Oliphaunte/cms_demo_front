@@ -1,7 +1,15 @@
 .t__loader-page {
+  z-index: $high_index;
+
   display: flex;
   justify-content: center;
   align-items: center;
 
+  position: absolute;
   margin: 0 auto;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: white;
 }

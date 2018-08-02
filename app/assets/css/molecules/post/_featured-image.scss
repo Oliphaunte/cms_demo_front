@@ -1,0 +1,69 @@
+.m__post-featured-image {
+  opacity: 1;
+  visibility: visible;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  .hide-element {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+  }
+  
+  aside.show-image {
+    max-width: 400px;
+    width: 100%;
+
+    .delete-button {
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      text-align: center;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      transition: 0.3s all;
+
+      &:hover, &:focus {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    img {
+      &:hover, &:focus {
+        background: lightblue;
+        
+        + .delete-button {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+  aside.show-input {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 200px;
+    outline: 2px dashed grey;
+    outline-offset: -10px;
+    background: rgba($cornflower_blue, 1);
+    color: dimgray;
+
+    input {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      cursor: pointer;
+    }
+  }
+}

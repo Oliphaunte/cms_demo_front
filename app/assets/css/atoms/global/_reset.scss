@@ -49,8 +49,7 @@ input, button, form, select, textarea {
   }
 }
 
-input:not([type='checkbox']):not([type='radio']),
-button, form, select, textarea {
+input, button, form, select, textarea {
   appearance: none;
   border-radius: 0;
   -webkit-transform: translateZ(0px);

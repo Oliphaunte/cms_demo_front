@@ -1,0 +1,44 @@
+.m__admin-posts--wrapper {
+  position: relative;
+
+  img {
+    width: 100%;
+  }
+
+  .wrapper__buttons {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba($light_grey, 0.4);
+    transition: all 0.3s;
+  }
+
+  span {
+    flex-basis: 100%;
+    display: block;
+    text-align: center;
+  }
+
+  a {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 10px;
+    max-width: 60%;
+  }
+
+  &:hover {
+    .wrapper__buttons {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

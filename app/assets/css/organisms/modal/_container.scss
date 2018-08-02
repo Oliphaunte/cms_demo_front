@@ -1,0 +1,31 @@
+.o__modal-container {
+  z-index: $highest_index;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  .modal-container__delete {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 15px;
+    padding: 50px;
+    height: 100%;
+    width: 100%;
+    max-width: 600px;
+    max-height: 400px;
+    background-color: rgba($dark_grey, 0.9);
+
+    h4 {
+      flex-basis: 100%;
+      text-align: center;
+    }
+  }
+}

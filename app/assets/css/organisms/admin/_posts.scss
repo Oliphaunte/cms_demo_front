@@ -1,0 +1,32 @@
+.o__admin-posts {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+  margin: 40px 20px 0;
+
+  article.admin-posts{
+    &__header {
+      margin: 0 0 10px 20px;
+    }
+
+    &__post {
+      position: relative;
+      margin: 0 0 40px 20px;
+      width: 100%;
+      transition: transform 0.3s;
+
+      &:hover {
+        cursor: pointer;
+        transition: transform 0.3s;
+      }
+    }
+  }
+
+  @include breakpoint($tablet) {
+    article.admin-posts{
+      &__post {
+        flex-basis: calc((100% / 3) - 20px);
+      }
+    }
+  }
+}

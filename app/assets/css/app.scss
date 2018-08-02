@@ -1,9 +1,9 @@
 // Order is important
-@import "./atoms/style";
-@import "./molecules/style";
-@import "./organisms/style";
-@import "./templates/style";
+@import 'atoms/style';
+@import 'molecules/**/*.scss';
+@import 'organisms/**/*.scss';
+@import 'templates/**/*.scss';
 
-@import "./vendor/style";
-@import "~slick-carousel/slick/slick.css";
-@import "~slick-carousel/slick/slick-theme.css";
+@import 'vendor/**/*.scss';
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';

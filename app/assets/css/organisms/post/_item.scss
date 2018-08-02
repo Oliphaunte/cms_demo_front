@@ -1,0 +1,22 @@
+.o__post-item {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+  align-content: flex-start;
+  margin: 15px;
+  max-width: $tablet;
+
+  article.post-item {
+    margin: 0 0 20px;
+
+    &__title {
+    }
+
+    &__featured-image {
+    }
+
+    &__form-submit {
+
+    }
+  }
+}

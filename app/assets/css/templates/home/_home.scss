@@ -1,11 +1,21 @@
 .t__home-page {
-  section {
-    display: flex;
+  section.home-page {
     justify-content: center;
-    margin: 30px 0 0;
-  
-    @include breakpoint($mobile) {
-      margin: 40px 0 0;
+
+    &__gallery {
+
+    }
+
+    &__posts {
+      margin: 30px 0 0;
+    }
+  }
+
+  @include breakpoint($tablet) {
+    section.home-page {
+      &__posts {
+        margin: 40px 0 0;
+      }
     }
   }
 }

@@ -1,0 +1,11 @@
+.t__admin-page {
+  align-content: flex-start;
+  justify-content: center;
+  
+  section.admin-page {
+    &__slider,
+    &__posts {
+      max-width: $tablet_landscape;
+    }
+  }
+}

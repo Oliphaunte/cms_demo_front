@@ -1,45 +1,57 @@
 require('dotenv').config()
 
-const path              = require('path'),
-      webpack           = require('webpack');
-
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const
+  HtmlWebpackPlugin   = require('html-webpack-plugin'),
+  path                = require('path'),
+  webpack             = require('webpack');
 
 // Plugins //
 const extractHtml = new HtmlWebpackPlugin({
-  template: path.join(__dirname, "app/index.html"),
+  template: 'app/index.html',
   filename: 'index.html',
 });
 
 // Rules //
-const jsRules = {
-  test: /\.(js|jsx)$/,
-  use: 'babel-loader',
-  exclude: /node_modules/
-};
-const fileRules = {
-  test: /\.(png|jpg|gif|svg|otf|eot|ttf|woff)$/,
-  loader: 'file-loader',
-  options: {
-    publicPath: "./",
-    outputPath: './assets/'
-  }
-};
+const 
+  jsRules = {
+    test: /\.(js|jsx)$/,
+    use: 'babel-loader?cacheDirectory',
+    exclude: /node_modules/
+  },
+  fontRules = {
+    test: /\.(svg|otf|eot|ttf|woff)$/,
+    loader: 'file-loader',
+    options: {
+      name: '[name]-[hash:16].[ext]',
+      publicPath: './assets/fonts',
+      outputPath: './assets/fonts'
+    }
+  },
+  imageRules = {
+    test: /\.(png|jpg|gif)$/,
+    loader: 'file-loader',
+    options: {
+      name: '[name]-[hash:16].[ext]',
+      publicPath: './assets/images',
+      outputPath: './assets/images'
+    }
+  };
 
 module.exports = {
-  entry: ['./app/app.jsx', './app/assets/css/app.scss'],
+  entry: './app/index.js',
   output: {
     filename: 'index.bundle.js',
-    path: path.resolve(__dirname, "dist"),
-    publicPath: '',
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
   },
   node: {
-    fs: "empty"
+    fs: 'empty'
   },
   module: {
     rules: [
       jsRules,
-      fileRules
+      fontRules,
+      imageRules,
     ]
   },
   plugins: [

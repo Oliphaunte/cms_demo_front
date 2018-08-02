@@ -4,6 +4,8 @@
 @import "global/variables";
 @import "global/animations";
 
+@import "defaults/*.scss";
+
 @import "layout/header";
 @import "layout/main";
 @import "layout/footer";
