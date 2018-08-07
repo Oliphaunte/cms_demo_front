@@ -6,7 +6,6 @@ class Post extends React.Component {
   constructor(props) {
     super(props)
     this.state = {}
-    this.inputChange = this.inputChange.bind(this)
   }
 
   componentDidMount() {

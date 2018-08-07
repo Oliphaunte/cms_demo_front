@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { updatePost, savePost, fetchData } from '@/app/store/actions/post'
+import Form from '@/app/views/components/auth/form'
 
 class Post extends React.Component {
   constructor(props) {
@@ -15,8 +16,9 @@ class Post extends React.Component {
     this.props.fetchData(page_name)
   }
 
-  removeImage = (e) => {
+  deleteImage = (e) => {
     e.preventDefault()
+
     this.props.updatePost('file', 'post_featured_image', '')
   }
 
@@ -40,19 +42,21 @@ class Post extends React.Component {
 
   render() {
     const { post_title, post_featured_image } = this.props
-    console.log(post_featured_image)
+
     return(
       <main className='t__post-page'>
         <section className='post-page__title'>
-          <form className='o__post-item' encType='multipart/form-data' method='post' onSubmit={this.savePost}>
+          <Form className='o__post-item' onSubmit={this.savePost}>
             <article className='post-item post-item__title'>
               <label htmlFor='post-title'> Title </label>
-              <input 
+              <input
+                id='post-title'
                 type='text' 
-                id='post-title' 
                 name='post_title'
+                required={true} 
                 value={post_title}
-                onChange={this.inputChange}/>
+                onChange={this.inputChange} />
+              <span className='invalid-feedback'></span>
             </article>
 
             <article className='post-item post-item__featured-image'>
@@ -65,14 +69,15 @@ class Post extends React.Component {
                 </aside>
 
                 <aside className={post_featured_image ? 'hide-element' : 'show-input'} >
-                  <label htmlFor='post-featured-image'> Click to select an image</label>
-                  <input 
+                  <label htmlFor='email'> E-mail </label>
+                  <input
                     type='file' 
                     id='post-featured-image' 
                     name='post_featured_image' 
                     accept="image/*"
                     onChange={this.inputChange} 
                     required={true} />
+                  <span className='invalid-feedback'></span>
                 </aside>
               </div>
             </article>
@@ -84,7 +89,7 @@ class Post extends React.Component {
             <article className='post-item post-item__form-submit'>
               <input type='submit' value='Update' className='button button--submit'/>
             </article>
-          </form>
+          </Form>
         </section>
       </main>
     )

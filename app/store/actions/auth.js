@@ -40,17 +40,14 @@ export function login(email, password) {
     return Axios
       .post('/auth/login', { email, password })
       .then(res => {
-        let { status } = res
-
-        if (status === 200) {
-          console.log(res)
+        if (res.status === 200) {
           dispatch(loginError(false))
           dispatch(loginSuccess(true))
           dispatch(isAuthenticated(true))
         }
       })
       .catch(err => {
-        dispatch(loginError(err))
+        dispatch(loginError(err.response.data))
         throw err
       })
       .finally(() => dispatch(loginPending(false)));
@@ -65,7 +62,7 @@ export function logout() {
         let { status } = res
 
         if (status === 204) {
-          dispatch(loginError(true))
+          dispatch(loginError(null))
           dispatch(isAuthenticated(false))
         }
       })

@@ -2,19 +2,22 @@
   max-width: 540px;
 
   article.auth-form {
-    &__form-header {
+    &__form-header,
+    &__input-container,
+    &__form-error,
+    &__form-submit {
       flex-basis: 100%;
-      margin: 0 0 20px;
-    }
-
-    &__input-container {
-      flex-basis: 100%;
-      margin: 0 0 20px;
+      margin: 0 20px;
+      padding: 10px 0;
     }
 
     &__form-submit {
-      flex-basis: 100%;
       justify-content: flex-end;
+    }
+
+    &__form-error {
+      background: rgba($indian_red, 0.8);
+      text-align: center;
     }
   }
 }

@@ -5,7 +5,7 @@
   section.admin-page {
     &__slider,
     &__posts {
-      max-width: $tablet_landscape;
+      justify-content: center;
     }
   }
 }

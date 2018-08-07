@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   flex-basis: 100%;
   margin: 40px 20px 0;
+  max-width: $desktop;
 
   article.admin-posts{
     &__header {

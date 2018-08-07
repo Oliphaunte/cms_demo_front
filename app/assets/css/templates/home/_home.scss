@@ -1,20 +1,18 @@
 .t__home-page {
   section.home-page {
-    justify-content: center;
-
-    &__gallery {
-
-    }
-
+    &__slider,
     &__posts {
+      justify-content: center;
       margin: 30px 0 0;
     }
   }
 
   @include breakpoint($tablet) {
     section.home-page {
+      &__slider,
       &__posts {
-        margin: 40px 0 0;
+        justify-content: center;
+        margin: 30px 0 0;
       }
     }
   }

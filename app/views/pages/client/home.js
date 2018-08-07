@@ -23,11 +23,13 @@ class Home extends React.Component {
 
     return (
       <React.Fragment>
-        <section className='home-page home-page__gallery'>
-          <Gallery />
+        <section className='home-page__slider'>
+          <div className='o__home-page-slider'>
+            <Gallery />
+          </div>
         </section>
 
-        <section className='home-page home-page__posts'>
+        <section className='home-page__posts'>
           <Posts />
         </section>
       </React.Fragment>

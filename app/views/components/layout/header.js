@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Link, withRouter } from 'react-router-dom'
 import { logout, authStatus } from '@/app/store/actions/auth'
+import IconLogo from './icon_logo'
 
 import Hamburger_Menu from './hamburger'
 
@@ -9,10 +10,9 @@ class Header extends React.Component {
   constructor(props) {
     super(props)
     this.state = {}
-    this.handleLogout = this.handleLogout.bind(this)
   }
 
-  async handleLogout(e) {
+  handleLogout = async(e) => {
     e.preventDefault()
 
     await this.props.logout()
@@ -29,7 +29,7 @@ class Header extends React.Component {
       <header>
         <aside>
           <Link to="/"> 
-            <img src={require('@/app/assets/images/logo.svg')} />
+            <IconLogo />
           </Link>
         </aside>
 

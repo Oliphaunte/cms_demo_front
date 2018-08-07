@@ -27,7 +27,7 @@ class Login extends React.Component {
 
   render() {
     let { isLoginPending, isLoginSuccess, loginError, isAuthenticated } = this.props
-
+    
     this.isAuthenticated ? <Redirect to='/' /> : null
 
     return (
@@ -36,9 +36,9 @@ class Login extends React.Component {
           <LoginForm
             inputChange={this.inputChange}
             onSubmit={this.onSubmit}
-            isLoginPending={this.isLoginPending}
-            isLoginSuccess={this.isLoginSuccess}
-            loginError={this.loginError}
+            isLoginPending={isLoginPending}
+            isLoginSuccess={isLoginSuccess}
+            loginError={loginError}
             ></LoginForm>
         </section>
       </main>

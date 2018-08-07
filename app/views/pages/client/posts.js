@@ -27,7 +27,6 @@ class Posts extends React.Component {
   }
 
   render() {
-    console.log(this.props)
     const { posts } = this.props
     const masonryOptions = {
       transitionDurations: 0

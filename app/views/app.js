@@ -5,6 +5,7 @@ import Header       from '@/app/views/components/layout/header'
 import Footer       from '@/app/views/components/layout/footer'
 import Home         from '@/app/views/pages/client/home'
 import Login        from '@/app/views/pages/auth/login'
+import Post         from '@/app/views/pages/client/post'
 import Contact      from '@/app/views/pages/contact'
 import AdminIndex   from '@/app/views/pages/admin/'
 import PrivateRoute from '@/app/views/pages/private_route'
@@ -22,9 +23,10 @@ class App extends React.Component {
         <Header />
           
           <Switch>
-            <Route exact path='/' component={Home}  />
-            <Route path='/contact' component={Contact} />
-            <Route path='/login' component={Login} />
+            <Route exact path='/'     component={Home}  />
+            <Route path='/contact'    component={Contact} />
+            <Route path='/login'      component={Login} />
+            <Route path='/posts/:id'  component={Post} />
             <PrivateRoute path='/admin' component={AdminIndex} />
             <Route path='' component={Error404} />
           </Switch>

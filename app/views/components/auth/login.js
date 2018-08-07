@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { login, authStatus } from '@/app/store/actions/auth'
 import Form from '@/app/views/components/auth/form'
 import InputHelper from '@/app/utils/input_helper'
+import { loginPending } from '../../../store/actions/auth';
 
 class LoginForm extends React.Component {
   constructor(props) {
@@ -12,11 +13,15 @@ class LoginForm extends React.Component {
   }
   
   render() {
-    const { onSubmit, inputChange } = this.props
+    const { onSubmit, inputChange, loginError } = this.props
 
     return (
       <Form submit={onSubmit} className='o__auth-form'>
-        <article className='auth-form__input-container'>
+        { loginError ? (
+          <article className='auth-form auth-form__form-error'>{loginError.status}</article>
+        ) : null }
+
+        <article className='auth-form auth-form__input-container'>
           <label htmlFor='email'> E-mail </label>
           <input
             id='email'
@@ -27,7 +32,7 @@ class LoginForm extends React.Component {
           <span className='invalid-feedback'></span>
         </article>
 
-        <article className='auth-form__input-container'>
+        <article className='auth-form auth-form__input-container'>
           <label htmlFor='password'> Password </label>
           <input
             id='password'
@@ -40,7 +45,7 @@ class LoginForm extends React.Component {
           <span className='invalid-feedback'></span>
         </article>
 
-        <article className='auth-form__form-submit'>
+        <article className='auth-form auth-form__form-submit'>
           <input className='button button--submit' type='submit' />
         </article>
       </Form>

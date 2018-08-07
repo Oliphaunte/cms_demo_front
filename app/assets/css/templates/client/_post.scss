@@ -1,0 +1,15 @@
+.t__client-post {
+  display: flex;
+
+  section.client-post {
+    &__container {
+      align-content: baseline;
+      justify-content: center;
+      text-align: center;
+
+      h3 { 
+        flex-basis: 100%;
+      }
+    }
+  }
+}
